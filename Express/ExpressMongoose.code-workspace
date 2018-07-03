@@ -1,0 +1,31 @@
+{
+    "folders": [
+        {
+            "path": "basic_mongoose_app"
+        },
+        {
+            "path": "SurveyForm"
+        },
+        {
+            "path": "EJSCats"
+        },
+        {
+            "path": "QuotingDojo"
+        },
+        {
+            "path": "MongooseDashboard"
+        },
+        {
+            "path": "auth_session_Demo"
+        },
+        {
+            "path": "LoginRegistration"
+        },
+        {
+            "path": "1955API"
+        },
+        {
+            "path": "RestfulTaskAPI"
+        }
+    ]
+}

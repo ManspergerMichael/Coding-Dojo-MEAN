@@ -1,0 +1,40 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to Task App!
+  </h1>
+</div>
+
+<div class="taskList">
+  <button (click)="showTasks($event)">Show Tasks</button>
+  <h3>Task List</h3>
+  <h2 *ngFor="let task of tasks">
+    <p>{{task.title}}</p>
+    <button (click)="displayTask($event, task._id)">Show Details</button>
+  </h2>
+</div>
+
+<app-task *ngIf="taskDetail" [taskToShow]="taskDetail"></app-task>
+
+
+
+<div id="newTask">
+  <h3>New Task</h3>
+    <form (submit)="create($event)">
+        Title: <input type="text" name="title" [(ngModel)]="title" /><br>
+        Description: <input type="text" name="description" [(ngModel)]="description"/><br>
+        <input type="submit" value="Submit">
+      </form>
+</div>
+
+<div id="editTask" *ngIf="editTask">
+  <h3>Edit Task</h3>
+  <form (submit)="editTaskProcess($event)">
+    Title: <input type="text" name="title" [(ngModel)]="editTask.title" /><br>
+    Description: <input type="text" name="description"[(ngModel)]="editTask.description"/><br>
+    <input type="hidden" name="_id" [(ngModel)]="editTask._id">
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+
